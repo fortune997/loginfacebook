@@ -1,12 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import {  LoginForm } from './login-form/login-form';
+import {  LoginLeft } from './login-left/login-left';
+import {Footer } from './footer/footer';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [LoginLeft, LoginForm, Footer, FormsModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('loginfacebook');
-}
+export class App {}
